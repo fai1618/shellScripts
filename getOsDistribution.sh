@@ -1,5 +1,6 @@
+#!/bin/bash
 # Get Linux distribution name
-get_os_distribution() {
+get_linux_distribution() {
     if   [ -e /etc/debian_version ] ||
          [ -e /etc/debian_release ]; then
         # Check Ubuntu or Debian
@@ -18,3 +19,15 @@ get_os_distribution() {
         echo "unkown distribution"
         distri_name="unkown"
     fi
+  }
+
+UNAME = "$(uname)"
+if [$UNAME = 'Derwin'];then
+  echo "Mac"
+elif [ $UNAME = 'MINGW64_NT-10.0'];then
+  echo "Windows(MSYS2)"
+elif [ $UNAME = 'Linux'];then
+  get_linux_distribution
+else
+  echo echo "unkown os"
+fi
