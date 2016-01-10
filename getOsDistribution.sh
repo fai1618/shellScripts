@@ -21,12 +21,12 @@ get_linux_distribution() {
     fi
   }
 
-UNAME = "$(uname)"
-if [$UNAME = 'Derwin'];then
+UNAME="$(uname)"
+if [ $UNAME = "Darwin" ];then
   echo "Mac"
-elif [ $UNAME = 'MINGW64_NT-10.0'];then
+elif [ $UNAME = "MINGW64_NT-10.0" ];then
   echo "Windows(MSYS2)"
-elif [ $UNAME = 'Linux'];then
+elif [ $UNAME = "Linux" ];then
   get_linux_distribution
 else
   echo echo "unkown os"
