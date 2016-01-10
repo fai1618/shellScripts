@@ -28,6 +28,7 @@ elif [ $UNAME = "MINGW64_NT-10.0" ];then
   echo "Windows(MSYS2)"
 elif [ $UNAME = "Linux" ];then
   get_linux_distribution
+  echo $distri_name
 else
   echo echo "unkown os"
 fi
