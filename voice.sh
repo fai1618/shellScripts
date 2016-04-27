@@ -22,7 +22,7 @@ if test $# -ne 1
 			#-d "emotion_level=4" \
 				#1~4
 
-		afplay asdfghjkl123456789.wav
+		aplay asdfghjkl123456789.wav
 		rm -rf asdfghjkl123456789.wav
 fi
 
